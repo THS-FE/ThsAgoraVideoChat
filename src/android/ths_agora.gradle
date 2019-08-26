@@ -1,0 +1,7 @@
+ext.supportLibVersion = '27.+'
+dependencies {
+    // 以下为即时通讯插件相关
+    implementation fileTree(dir: 'src\\main\\libs', include: ['*.aar', '*.jar'], exclude: [])
+    implementation "com.android.support:appcompat-v7:${supportLibVersion}"
+}
+

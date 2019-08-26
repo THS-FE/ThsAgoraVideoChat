@@ -15,5 +15,8 @@
 		<config-file parent="/*" target="AndroidManifest.xml">
 		</config-file>
 		<source-file src="src/android/ThsAgoraVideoChat.java" target-dir="src/cn/com/ths/agora/videochat/ThsAgoraVideoChat" />
+		<source-file src="src/android/ths_agora1.0.aar" target-dir="libs" />
+		<source-file src="src/android/ths_agora.gradle" target-dir="libs" />
+		<framework src="src/android/ths_agora.gradle" custom="true" type="gradleReference" /> 
 	</platform>
 </plugin>
