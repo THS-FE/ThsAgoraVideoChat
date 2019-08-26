@@ -1,0 +1,25 @@
+{
+  "name": "cn.com.ths.agora.videochat",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "cn.com.ths.agora.videochat",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THS-FE/ThsAgoraVideoChat.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "liuyx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/THS-FE/ThsAgoraVideoChat/issues"
+  },
+  "homepage": "https://github.com/THS-FE/ThsAgoraVideoChat#readme"
+}
