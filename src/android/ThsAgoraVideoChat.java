@@ -23,7 +23,8 @@ public class ThsAgoraVideoChat extends CordovaPlugin {
             String agoraAppId = args.getString(0);
             String agoraAccessToken = args.getString(1);
             String channelName = args.getString(2);
-            this.startVideoChat(agoraAppId,agoraAccessToken,channelName, callbackContext);
+            int uid = args.getInt(3);
+            this.startVideoChat(agoraAppId,agoraAccessToken,channelName,uid, callbackContext);
             return true;
         }
         return false;
@@ -36,13 +37,14 @@ public class ThsAgoraVideoChat extends CordovaPlugin {
      * @param channelName  信道名称
      * @param callbackContext 回调
      */
-    private void startVideoChat(String agoraAppId,String agoraAccessToken,String channelName, CallbackContext callbackContext) {
+    private void startVideoChat(String agoraAppId,String agoraAccessToken,String channelName,int uid, CallbackContext callbackContext) {
         if (agoraAppId != null && agoraAppId.length() > 0) {
             try {
                 Intent intent =new Intent(cordova.getActivity(), VideoChatViewActivity.class);
                 intent.putExtra(VideoChatViewActivity.AGORA_APP_ID,agoraAppId);
                 intent.putExtra(VideoChatViewActivity.AGORA_ACCESS_TOKEN,agoraAccessToken);
                 intent.putExtra(VideoChatViewActivity.CHANNEL_NAME,channelName);
+                intent.putExtra(VideoChatViewActivity.UID,uid);
                 cordova.getActivity().startActivity(intent);
             }catch (ActivityNotFoundException e){
                 callbackContext.success("ActivityNotFoundException");
