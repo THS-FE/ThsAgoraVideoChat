@@ -6,8 +6,8 @@ exports.startVideoChat = function (agoraAppId,agoraAccessToken,channelName,uid,p
      * agoraAppId 应用的唯一标识ID
      * agoraAccessToken  频道访问权限token
      * channelName  频道名称
-     * uid 当前用户id
-     * pid 单聊对方id
+     * uid 当前用户id  注意类型数字
+     * pid 单聊对方id  注意类型字符串
      * rtmToken 消息系统登录认证token
      */
     exec(success, error, 'ThsAgoraVideoChat', 'startVideoChat', [agoraAppId,agoraAccessToken,channelName,uid,pid,rtmToken]);

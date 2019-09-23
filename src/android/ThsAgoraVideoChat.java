@@ -49,14 +49,14 @@ public class ThsAgoraVideoChat extends CordovaPlugin {
                 // intent.putExtra(VideoChatViewActivity.CHANNEL_NAME,channelName);
                 // intent.putExtra(VideoChatViewActivity.UID,uid);
                 // cordova.getActivity().startActivity(intent);
-                Intent intent =new Intent(cordova.getActivity(), VideoChatViewActivity.class);
+                Intent intent =new Intent(cordova.getActivity(), MessageActivity.class);
                 intent.putExtra(Constant.AGORA_APP_ID_K,agoraAppId);
                 intent.putExtra(Constant.AGORA_ACCESS_TOKEN_K,agoraAccessToken);
                 intent.putExtra(Constant.CHANNEL_NAME_K,channelName);
                 intent.putExtra(Constant.UID_K,uid);
                 intent.putExtra(Constant.M_PEER_ID_K,pid);
                 intent.putExtra(Constant.RTM_TOKEN_K,rtmToken);
-                startActivity(intent);
+                cordova.getActivity().startActivity(intent);
             }catch (ActivityNotFoundException e){
                 callbackContext.success("ActivityNotFoundException");
             }
