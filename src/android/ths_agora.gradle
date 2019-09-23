@@ -9,5 +9,6 @@ dependencies {
     implementation fileTree(dir: 'src\\main\\libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation(name: 'ths_agora1.0', ext: 'aar')
     implementation "com.android.support:appcompat-v7:${supportLibVersion}"
+    implementation "com.android.support:recyclerview-v7:${supportLibVersion}"
 }
 
